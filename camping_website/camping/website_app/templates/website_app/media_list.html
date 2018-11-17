@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% if media_list %}
+  <ul>
+    {% for media in media_list %}
+      <li>
+        <h2>{{media.titre}}</h2>
+        <img src="{{media.image.url}}"/>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no media in the library.</p>
+  {% endif %}
+{% endblock %}
